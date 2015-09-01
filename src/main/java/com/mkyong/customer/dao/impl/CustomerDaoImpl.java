@@ -2,10 +2,11 @@ package com.mkyong.customer.dao.impl;
  
 import java.util.Date;
 import java.util.List;
- 
+
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
 import com.mkyong.customer.dao.CustomerDao;
 import com.mkyong.customer.model.Customer;
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
  
 public class CustomerDaoImpl extends 
        HibernateDaoSupport implements CustomerDao{

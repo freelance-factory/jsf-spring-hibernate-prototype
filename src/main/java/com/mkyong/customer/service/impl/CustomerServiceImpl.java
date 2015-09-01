@@ -1,12 +1,12 @@
-package com.mkyong.customer.bo.impl;
+package com.mkyong.customer.service.impl;
  
 import java.util.List;
  
-import com.mkyong.customer.bo.CustomerBo;
+import com.mkyong.customer.service.CustomerService;
 import com.mkyong.customer.dao.CustomerDao;
 import com.mkyong.customer.model.Customer;
  
-public class CustomerBoImpl implements CustomerBo{
+public class CustomerServiceImpl implements CustomerService {
  
 	CustomerDao customerDao;
  

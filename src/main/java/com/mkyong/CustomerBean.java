@@ -3,13 +3,13 @@ package com.mkyong;
 import java.io.Serializable;
 import java.util.List;
 
-import com.mkyong.customer.bo.CustomerBo;
+import com.mkyong.customer.service.CustomerService;
 import com.mkyong.customer.model.Customer;
 
 public class CustomerBean implements Serializable{
  
 	//DI via Spring
-	CustomerBo customerBo;
+	CustomerService customerService;
 	
 	public String name;
 	public String address;
@@ -30,13 +30,13 @@ public class CustomerBean implements Serializable{
 		this.address = address;
 	}
 
-	public void setCustomerBo(CustomerBo customerBo) {
-		this.customerBo = customerBo;
+	public void setCustomerService(CustomerService customerService) {
+		this.customerService = customerService;
 	}
  
 	//get all customer data from database
 	public List<Customer> getCustomerList(){
-		return customerBo.findAllCustomer();
+		return customerService.findAllCustomer();
 	}
 	
 	//add a new customer data into database
@@ -46,7 +46,7 @@ public class CustomerBean implements Serializable{
 		cust.setName(getName());
 		cust.setAddress(getAddress());
 		
-		customerBo.addCustomer(cust);
+		customerService.addCustomer(cust);
 		
 		clearForm();
 		
