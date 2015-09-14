@@ -2,11 +2,23 @@ package com.mkyong.customer.model;
 
 import java.util.Date;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "CUSTOMER")
 public class Customer{
-	
+
+	@Id @GeneratedValue
+	@Column(name = "CUSTOMER_ID")
 	public long customerId;
+
+	@Column(name = "NAME")
 	public String name;
+
+	@Column(name = "ADDRESS")
 	public String address;
+
+	@Column(name = "CREATED_DATE")
 	public Date createdDate;
 	
 	public long getCustomerId() {
